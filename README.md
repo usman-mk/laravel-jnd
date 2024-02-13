@@ -12,7 +12,7 @@
 Clone the repo and install the dependencies.
 
 ```bash
-git clone https://github.com/usman-mk/laravel-bitly.git
+git clone https://github.com/usman-mk/laravel-jnd.git
 cd laravel-bitly
 ```
 
