@@ -63,13 +63,13 @@
                     Confirm Password
                 </label>
             </div>
+            @if (Auth::user()->role === 'admin')
             <div class="relative z-0 w-full mb-6 group">
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700" for="role">
                   Role
                 </label>
                 <div class="relative">
                   <select class="block w-full px-4 py-3 pr-8 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="role" name="role">
-                    <option value="test">---</option>
                     <option value="user" {{ $model->role == 'user' ? 'selected' : '' }}>User</option>
                     <option value="admin" {{ $model->role == 'admin' ? 'selected' : '' }}>Admin</option>
                   </select>
@@ -81,6 +81,7 @@
                     </p>
                 @enderror
             </div>
+            @endif
             <button type="submit"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mr-auto">Update</button>
         </form>
